@@ -505,3 +505,10 @@ img {
   .modal__close:focus-visible {
     outline-color: green;
   }
+
+
+@media (max-width: 500px) {
+    .discription, .opinion, .ago, .did, .especialy, .role {
+        max-width: 200px;
+    }
+}
