@@ -468,6 +468,8 @@ document.addEventListener('click', function(event) {
 
     if (event.target.matches('.btnNext')) {
         if (countGlav === 1) {
+            screen.innerHTML = '';
+            screen.scrollTo(0, 0);
             screen.innerHTML = listScreen[1].scr;
             countGlav = 0;
         } else {
