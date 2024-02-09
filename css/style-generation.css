@@ -1,0 +1,374 @@
+/* Для каждого css одинаково */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+}
+
+body {
+    background-color: #658AAE;/*rgb(85, 121, 148); */
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font-family: 'OwnHand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Новый шрифт */
+
+@font-face {
+	font-family: 'OwnHand';
+    src: url("../fonts/OwnHand.eot");
+    src: url("../fonts/OwnHand.eot?#ieflix") format(embedded-opentype),
+    url("../fonts/OwnHand.woff") format(woff),
+    url("../fonts/OwnHand.ttf") format(truetype);
+    font-style: normal;
+    font-weight: normal;
+}
+
+.back-main {
+    flex: 1 0 auto;
+    margin: 0px;
+}
+
+.main {
+    height: 100%;
+    margin-right: 10%;
+    margin-left: 10%;
+
+    box-sizing: border-box;
+    background-color:  #8bbbc5;/* rgba(165, 218, 218, 0.678); */
+    box-shadow: 0 0 50px 50px  #8bbbc5;/* rgba(165, 218, 218, 0.678); */
+}
+
+
+
+
+
+/* Классы внутри main */
+
+.title {
+    background-image: url('../img/titles/generation.png');
+    text-align: center;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    max-width: 1600px;
+    min-height: 300px;
+    height: 10vh; 
+    margin: 0 auto;
+}
+
+
+
+
+    /* Описание */
+.sur-title {
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    background-image:
+        linear-gradient(rgb(213, 200, 179), rgb(180, 163, 136)),
+        linear-gradient(to bottom right, transparent 50.5%, rgb(213, 200, 179) 50.5%),
+        linear-gradient(to bottom left, transparent 50.5%, rgb(213, 200, 179) 50.5%),
+        linear-gradient(to top right, transparent 50.5%, rgb(180, 163, 136) 50.5%),
+        linear-gradient(to top left, transparent 50.5%, rgb(180, 163, 136) 50.5%);
+
+        
+    background-repeat: repeat, repeat-x, repeat-x, repeat-x, repeat-x;
+    background-position: 0 0, 10px 0, 10px 0, 10px 100%, 10px 100%;
+    background-size: auto auto, 20px 20px, 20px 20px, 20px 20px, 20px 20px;
+    background-clip: padding-box, border-box, border-box, border-box, border-box;
+    background-origin: padding-box, border-box, border-box, border-box, border-box;
+
+    border-radius: 30px;
+
+    max-width: 1600px;
+    margin: 0 auto;
+    margin-bottom: 2%;
+}
+
+
+
+.sur-text {
+    padding: 5%; /* 70px */
+    padding-top: 3.8%; /* 40px */
+    
+    max-width: 100%;
+    font-family: 'OwnHand';
+    font-size: 30px;
+    text-align: center;
+
+    display: block;
+    color: #2C3E50 ;
+
+}
+
+
+
+
+
+.tablet {
+    height: 90vh;
+    width: 40vw;
+    display: block; /* меняем на block, вместо relative */
+    margin: 0 auto; /* центрируем блок по горизонтали */
+    max-width: 1600px;
+    max-height: 2000px;
+    background-color: whitesmoke;
+    border-radius: 40px;
+    overflow: hidden; /* скрываем все, что выходит за границы блока */
+}
+
+.up {
+    height: 5vh;
+    max-height: 100px;
+    position: relative;
+}
+
+#resh {
+    height: 10px;
+    width: 10vw;
+    background-color: #2C3E50;
+    border-radius: 30px;
+    position: absolute; /* Используем абсолютное позиционирование */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 500px;
+    
+}
+
+.tablet-main {
+    margin: 7px;
+    height: 80vh;
+    background-color: rgb(201, 201, 201);
+    max-height: 1800px;
+    overflow-y: auto;
+}
+
+.screen {
+    margin: 20px;
+    font-size: 30px;
+}
+h1 {
+    text-align: center;
+}
+.o {
+    text-indent: 20px;
+}
+
+.down {
+    height: 5vh;
+    max-height: 100px;
+}
+
+@media (max-width: 500px) {
+    .tablet {
+        width: 80vw;
+    }
+}
+
+
+
+
+
+
+/* Книга для навигации */
+.navigation {
+    background-image: url('../img/navigation/book.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    max-width: 1024px;
+
+    max-height: 768px;
+    width: 100%;
+    height: 100vh;
+
+
+    margin: 0 auto;
+
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    
+    position: relative;
+
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+@media (max-width: 500px) {
+    .navigation {
+        max-height: 200px;
+    }
+}
+
+    /* Разделение книги на два раздела */
+.navigation-leftList, .navigation-rightList {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    flex: 1; 
+}
+
+    /* Добавление кнопок и добавление анимаций при наведении к ним */
+.btnGeneration, .btnHistory, .btnStudio {
+    position: absolute;
+    transition: background-image 0.1ms ease-in-out;
+    cursor: pointer;
+}
+
+
+.btnStudio {
+    background: none;
+
+    background-image: url('../img/navigation/studio.png');
+    width: 20vw;
+    max-width: 365px;
+    min-height: 90px;
+
+    flex: 1;
+
+    background-position: center;
+    background-size: contain; 
+    background-repeat: no-repeat;
+
+    position: relative;
+    right: 25px;
+    bottom: 20px;
+
+    margin: 5px; 
+    outline: none; 
+    border: 0;
+}
+
+@keyframes studioAnimation {
+    0% { background-image: url('../img/navigation/anim/studio/studio1.png'); }
+    33% { background-image: url('../img/navigation/anim/studio/studio2.png'); }
+    66% { background-image: url('../img/navigation/anim/studio/studio3.png'); }
+    100% { background-image: url('../img/navigation/anim/studio/studio1.png'); }
+}
+
+.btnStudio:hover {
+    animation: studioAnimation 0.5s steps(3) infinite;
+}
+
+
+
+.btnHistory {
+    background: none;
+
+    background-image: url('../img/navigation/history.png');
+    width: 20vw;
+    max-width: 400px;
+    min-height: 90px;
+
+    flex: 1;
+
+    background-position: center;
+    background-size: contain; 
+    background-repeat: no-repeat;
+
+    position: relative;
+    right: 25px;
+    top: 10px;
+
+    margin: 5px; 
+    outline: none; 
+    border: 0;
+}
+
+@keyframes historyAnimation {
+    0% { background-image: url('../img/navigation/anim/history/history1.png'); }
+    33% { background-image: url('../img/navigation/anim/history/history2.png'); }
+    66% { background-image: url('../img/navigation/anim/history/history3.png'); }
+    100% { background-image: url('../img/navigation/anim/history/history1.png'); }
+}
+
+.btnHistory:hover {
+    animation: historyAnimation 0.5s steps(3) infinite;
+}
+
+
+
+.btnMain {
+    background: none;
+
+    background-image: url('../img/navigation/root.png');
+    width: 20vw;
+    max-width: 365px;
+    min-height: 90px;
+
+    flex: 1;
+
+    background-position: center;
+    background-size: contain; 
+    background-repeat: no-repeat;
+
+    position: relative;
+    left: 50px;
+    bottom: 20px;
+
+    margin: 5px; 
+    outline: none; 
+    border: 0;
+
+    cursor: pointer;
+}
+
+@keyframes rootAnimation {
+    0% { background-image: url('../img/navigation/anim/root/root1.png'); }
+    33% { background-image: url('../img/navigation/anim/root/root2.png'); }
+    66% { background-image: url('../img/navigation/anim/root/root3.png'); }
+    100% { background-image: url('../img/navigation/anim/root/root1.png'); }
+}
+
+.btnMain:hover {
+    animation: rootAnimation 0.5s steps(3) infinite;
+}
+
+@media (max-width: 500px) {
+    .btnMain {
+        position: relative;
+        left: 30px;
+        bottom: 5px;
+    } 
+
+    .btnStudio {
+        position: relative;
+        right: 28px;
+        bottom: -20px;
+    } 
+
+    .btnHistory {
+        position: relative;
+        right: 25px;
+        top: -40px;
+    }
+}
+
+
+
+
+
+/* Авторы проекта */
+.authors {
+    background-color: rgb(58, 68, 80);
+    flex: 0 0 auto;
+    text-align: center;
+
+    color: rgb(190, 190, 190);
+    font-family: 'OwnHand', sans-serif;
+    font-size: 18px;
+}
