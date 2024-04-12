@@ -273,14 +273,7 @@ btnNews.style.backgroundColor = listScreen[0].colorBtn3;
 btnBrow.style.backgroundColor = listScreen[0].colorBtn4;
 screen.innerHTML = listScreen[0].scr;
 
-const infoWindow = document.createElement('div');
-infoWindow.classList.add('info-window');
-infoWindow.innerHTML = `<div class="info-text">Вы находитесь в режиме оффлайн! <br> Некоторые функции могут быть не доступны.</div> <button class="btn-close">Ок</button>`;
-screen.appendChild(infoWindow);
-const btnClose = infoWindow.querySelector('.btn-close');
-btnClose.addEventListener('click', () => {
-    infoWindow.remove();
-});
+
 
 function handleSearch(event) {
     if (event.key === 'Enter' && countEntr < 1) {
@@ -307,14 +300,7 @@ btnBrow.addEventListener('click', () => {
 
     countEntr = 0;
 
-    const infoWindow = document.createElement('div');
-    infoWindow.classList.add('info-window');
-    infoWindow.innerHTML = `<div class="info-text">Вы находитесь в режиме оффлайн! <br> Некоторые функции могут быть не доступны.</div> <button class="btn-close">Ок</button>`;
-    screen.appendChild(infoWindow);
-    const btnClose = infoWindow.querySelector('.btn-close');
-    btnClose.addEventListener('click', () => {
-        infoWindow.remove();
-    });
+    
 });
 
 
@@ -327,14 +313,7 @@ btnLeg.addEventListener('click', () => {
 
     screen.innerHTML = listScreen[2].scr;
 
-    const infoWindow = document.createElement('div');
-    infoWindow.classList.add('info-window');
-    infoWindow.innerHTML = `<div class="info-text">Вы находитесь в режиме оффлайн! <br> Некоторые функции могут быть не доступны.</div> <button class="btn-close">Ок</button>`;
-    screen.appendChild(infoWindow);
-    const btnClose = infoWindow.querySelector('.btn-close');
-    btnClose.addEventListener('click', () => {
-        infoWindow.remove();
-    });
+    
 });
 
 screen.addEventListener('keydown', (event) => {
@@ -354,15 +333,7 @@ btnHis.addEventListener('click', () => {
 
     screen.innerHTML = listScreen[1].scr;
 
-    const infoWindow = document.createElement('div');
-    infoWindow.classList.add('info-window');
-    infoWindow.innerHTML = `<div class="info-text">Вы находитесь в режиме оффлайн! <br> Некоторые функции могут быть не доступны.</div> <button class="btn-close">Ок</button>`;
-    screen.appendChild(infoWindow);
-    const btnClose = infoWindow.querySelector('.btn-close');
-    btnClose.addEventListener('click', () => {
-        infoWindow.remove();
-    });
-    countGlav = 0;
+
 });
 
 
@@ -375,14 +346,7 @@ btnNews.addEventListener('click', () => {
 
     screen.innerHTML = listScreen[3].scr;
 
-    const infoWindow = document.createElement('div');
-    infoWindow.classList.add('info-window');
-    infoWindow.innerHTML = `<div class="info-text">Вы находитесь в режиме оффлайн! <br> Некоторые функции могут быть не доступны.</div> <button class="btn-close">Ок</button>`;
-    screen.appendChild(infoWindow);
-    const btnClose = infoWindow.querySelector('.btn-close');
-    btnClose.addEventListener('click', () => {
-        infoWindow.remove();
-    });
+
 
 })
 
